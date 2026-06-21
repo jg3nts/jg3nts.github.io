@@ -86,9 +86,10 @@
   overflow-wrap: break-word;
   word-break: break-word;
 
-  text-align: center;
+  text-align:right;
   letter-spacing: 1px;
   line-height: 1.6;
+
 }
 
 /* =========================
@@ -106,8 +107,8 @@ a:visited {
 @media (max-width: 600px) {
 
   .foreground-image {
-    width: 95vw;
-    transform: scale(1.25); /* even bigger on mobile */
+    width: 100vw;
+    transform: scale(1.50); /* even bigger on mobile */
   }
 
   .overlay {
