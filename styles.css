@@ -103,7 +103,7 @@ a:hover {
   }
 
   .overlay {
-    gap: 180px;
+    gap: 200px;
   }
 }
 
@@ -132,11 +132,11 @@ a:hover {
   }
 
   .youreinvited {
-    font-size: clamp(4rem, 10vw, 6rem);
+    font-size: clamp(3rem, 8vw, 5rem);
   }
 
   .clickhere {
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
 }
 
