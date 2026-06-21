@@ -13,9 +13,7 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-body {
-    background: red !important;
-  }
+
 
 /* =========================
    MAIN LAYOUT
@@ -161,6 +159,9 @@ a:hover {
 
   .clickhere {
     font-size: 2rem;
+  }
+  body {
+    background: red !important;
   }
 }
 
