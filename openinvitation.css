@@ -1,19 +1,26 @@
-@media (max-width: 600px) {
-.container {
-    flex-direction: column;
-}
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 600px) {
 
+  .foreground-image {
+    width: 85vw;
+    transform: scale(1);
+  }
+
+  .clickhere {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+}
 .container {
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,27 +28,29 @@
 
 /* background video */
 .video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    z-index: -1;
-    pointer-events: none;
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* image on top */
+/* foreground image */
 .foreground-image {
   position: relative;
   z-index: 1;
+
   width: min(400px, 80vw);
-  max-width: 90%;
+  max width: 80%;
   height: auto;
-  transform: scale(1.1); /* optional subtle effect */
+
+  transform: scale(1.05);
 }
 
 /* overlay */
@@ -67,8 +76,10 @@
   max-width: 80%;
   letter-spacing: 1px;
   line-height: 1.6;
+
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
+
   font-size: clamp(16px, 4vw, 24px);
   text-align: center;
 }

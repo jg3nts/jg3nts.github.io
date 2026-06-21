@@ -1,100 +1,104 @@
-/* reset */
-@media (max-width: 600px) {
-.container {
-    flex-direction: column;
-}
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+
+  .foreground-image {
+    transform: scale(1);
+  }
+
+  .overlay {
+    padding: 8px;
+    gap: 10px;
+  }
+
+}
+body {
+  overflow-x: hidden;
 }
 
-body {
-    overflow-x: hidden;
-}
 .container {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* background video */
 .video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    z-index: -1;
-    pointer-events: none;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* foreground image */
 .foreground-image {
-    position: relative;
-    width: 400px;
-    z-index: 1;
-    transform: scale(1.3);
-    width: min(400px, 80vw);
-    max-width: 90%;
-    height: auto;
+  position: relative;
+  z-index: 1;
+
+  width: min(400px, 80vw);
+  height: auto;
+
+  transform: scale(1.1);
 }
 
-/* overlay container */
+/* overlay */
 .overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    gap: 160px;
-    
-    gap: 12px;
-    padding: 10px;
+  text-align: center;
+
+  gap: 12px;
+  padding: 10px;
 }
 
-/* text styling */
+/* text */
 .youreinvited,
 .clickhere {
-    font-family: "Pinyon Script", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
 }
 
+/* title */
 .youreinvited {
-    font-size: 50px;
-    color: azure;
-    margin: 0;
-    font-size: clamp(28px, 6vw, 50px);
+  font-size: clamp(28px, 6vw, 50px);
+  color: azure;
+  margin: 0;
 }
 
+/* link text */
 .clickhere {
-    font-size: 24px;
-    color: azure;
-    margin: 0;
-    font-size: clamp(16px, 4vw, 24px);
+  font-size: clamp(16px, 4vw, 24px);
+  color: azure;
+  margin: 0;
 }
 
 /* links */
 a:link {
-    text-decoration: none;
-    color: azure;
+  text-decoration: none;
+  color: azure;
 }
 
 a:visited {
-    color: azure;
+  color: azure;
 }
