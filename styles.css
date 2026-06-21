@@ -132,11 +132,11 @@ a:hover {
   }
 
   .youreinvited {
-    font-size: clamp(3rem, 12vw, 4rem);
+    font-size: clamp(6rem, 20vw, 16rem);
   }
 
   .clickhere {
-    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    font-size: clamp(2.5rem, 9vw, 5rem);
   }
 }
 
