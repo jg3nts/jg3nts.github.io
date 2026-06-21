@@ -1,23 +1,18 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@media (max-width: 600px) {
 
-  .foreground-image {
-    transform: scale(1);
-  }
-
-  .overlay {
-    padding: 8px;;
-  }
-
-}
+/* Prevent horizontal scrolling */
+html,
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
+/* Main container */
 .container {
   position: relative;
   min-height: 100vh;
@@ -28,7 +23,7 @@ body {
   align-items: center;
 }
 
-/* background video */
+/* Background video */
 .video-bg {
   position: fixed;
   top: 0;
@@ -43,18 +38,18 @@ body {
   pointer-events: none;
 }
 
-/* foreground image */
+/* Foreground image */
 .foreground-image {
   position: relative;
   z-index: 1;
 
-  width: min(400px, 80vw);
+  width: min(450px, 85vw);
   height: auto;
 
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* overlay */
+/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -67,37 +62,90 @@ body {
 
   text-align: center;
 
-  gap: 150px;
-  padding: 10px;
+  gap: clamp(60px, 12vw, 150px);
+  padding: 1rem;
 }
 
-/* text */
+/* Text styles */
 .youreinvited,
 .clickhere {
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
+  color: azure;
 }
 
-/* title */
+/* Main title */
 .youreinvited {
-  font-size: clamp(28px, 6vw, 50px);
-  color: azure;
-  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
 }
 
-/* link text */
+/* Link text */
 .clickhere {
-  font-size: clamp(16px, 4vw, 24px);
-  color: azure;
-  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
-/* links */
-a:link {
-  text-decoration: none;
-  color: azure;
-}
-
+/* Links */
+a:link,
 a:visited {
   color: azure;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* ---------- Large Desktop ---------- */
+@media (min-width: 1400px) {
+  .foreground-image {
+    width: 500px;
+  }
+
+  .overlay {
+    gap: 180px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .foreground-image {
+    width: min(400px, 80vw);
+  }
+
+  .overlay {
+    gap: 90px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .foreground-image {
+    width: 90vw;
+    transform: scale(1);
+  }
+
+  .overlay {
+    gap: 50px;
+    padding: 0.75rem;
+  }
+
+  .youreinvited {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .clickhere {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+}
+
+/* ---------- Very Small Phones ---------- */
+@media (max-width: 375px) {
+  .overlay {
+    gap: 35px;
+  }
+
+  .foreground-image {
+    width: 95vw;
+  }
 }
