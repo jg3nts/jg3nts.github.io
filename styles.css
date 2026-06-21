@@ -120,7 +120,7 @@ a:hover {
 }
 
 /* ---------- Mobile ---------- */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .foreground-image {
     width: 90vw;
     transform: scale(1);
