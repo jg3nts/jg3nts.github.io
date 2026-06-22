@@ -87,7 +87,7 @@ body {
 
   /* ✅ Proper wrapping */
   width: min(90vw, 600px);
-  max-width: 90%;
+  max-width: 95%;
 
   white-space: normal;
   overflow-wrap: break-word;
