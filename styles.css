@@ -55,8 +55,10 @@ body {
   width: min(450px, 85vw);
   height: auto;
 
-  transform: scale(1.05);
+  transform: scale(1.15);
+  
 }
+
 
 /* =========================
    OVERLAY (MAIN SPACING CONTROL)
@@ -108,7 +110,7 @@ a:visited {
 }
 
 a:hover {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 /* =========================
